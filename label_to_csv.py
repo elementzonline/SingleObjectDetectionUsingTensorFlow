@@ -78,7 +78,7 @@ def main():
         args.outputFile = args.inputDir + "/labels.csv"
     if(args.className is None):
         # raise("Class name is mandatory, use --help for usage")
-        args.outputFile = "className"
+        args.className = "className"
 
     assert(os.path.isdir(args.inputDir))
 
