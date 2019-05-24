@@ -34,7 +34,7 @@ def label_to_csv(path, name):
         width, height = im.size
         label_fd = open(os.path.join(path, 'Label', image_file.split('/')[-1].replace('.jpg', '.txt')))
         data = label_fd.readline().rstrip().lstrip(image_file.split('/')[-2]).lstrip(' ').split(' ')
-        value = image_file.split('/')[-1], width, height,'plate', round(float(data[0])), round(float(data[1])), round(float(data[2])), round(float(data[3]))
+        value = image_file.split('/')[-1], width, height,name, round(float(data[0])), round(float(data[1])), round(float(data[2])), round(float(data[3]))
         # break
 
     #     tree = ET.parse(image_file)
@@ -51,7 +51,7 @@ def label_to_csv(path, name):
     #                 )
         csv_list.append(value)
     column_name = ['filename', 'width', 'height',
-                name, 'xmin', 'ymin', 'xmax', 'ymax']
+                 'class','xmin', 'ymin', 'xmax', 'ymax']
     xml_df = pd.DataFrame(csv_list, columns=column_name)
     return xml_df
 
