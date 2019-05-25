@@ -94,6 +94,7 @@ python export_inference_graph \
 import tensorflow as tf
 import sys
 sys.path.append("models/research")
+sys.path.append("models/research/slim")
 # sys.path.append("../../models/research/slim")
 from google.protobuf import text_format
 from object_detection import exporter
