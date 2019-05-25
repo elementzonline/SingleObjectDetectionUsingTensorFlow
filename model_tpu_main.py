@@ -24,7 +24,7 @@ from __future__ import print_function
 
 from absl import flags
 import tensorflow as tf
-import tensorflow as tf
+import sys
 sys.path.append("models/research")
 sys.path.append("models/research/slim")
 
