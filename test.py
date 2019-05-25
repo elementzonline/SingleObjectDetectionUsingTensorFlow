@@ -17,7 +17,7 @@ from object_detection.utils import ops as utils_ops
 
 
 # This is needed to display the images.
-%matplotlib inline
+# %matplotlib inline
 
 
 from object_detection.utils import label_map_util
